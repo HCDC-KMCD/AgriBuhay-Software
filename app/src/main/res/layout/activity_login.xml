@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".LoginActivity"
+    android:background="@drawable/pic_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/barLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_boarder"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="AgriBuhay"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20sp"
+            android:background="@drawable/grey_boarder"
+            android:elevation="10dp"
+            android:outlineAmbientShadowColor="@color/grey"
+            tools:targetApi="p">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/txtEmail1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/white"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="16sp"
+                android:paddingRight="16sp"
+                android:textColorHint="@color/primaryColor"
+                android:textStyle="bold"
+                app:met_baseColor="@color/primaryColor"
+                app:met_floatingLabel="normal"
+                app:met_textColor="@color/primaryColor" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/grey_boarder"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="@color/grey"
+            tools:targetApi="p">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/txtPass1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/white"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="16sp"
+                android:paddingRight="16sp"
+                android:textColorHint="@color/primaryColor"
+                android:textStyle="bold"
+                app:met_baseColor="@color/primaryColor"
+                app:met_floatingLabel="normal"
+                app:met_textColor="@color/primaryColor" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/primaryColor"
+            android:visibility="gone"
+            tools:targetApi="lollipop" />
+
+        <Button
+            android:id="@+id/btnLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/red_boarder"
+            android:fontFamily="sans-serif-medium"
+            android:text="Login"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/red_boarder"
+            android:fontFamily="sans-serif-medium"
+            android:layout_margin="10dp"
+            android:text="Register"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/forgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:linksClickable="true"
+            android:text="Forgot Password?"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

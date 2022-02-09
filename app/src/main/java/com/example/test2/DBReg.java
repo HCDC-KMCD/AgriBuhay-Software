@@ -10,10 +10,10 @@ public class DBReg {
 
     public DBReg() {
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        databaseReference = db.getReference(Registration.class.getSimpleName());
+        databaseReference = db.getReference(UsersData.class.getSimpleName());
     }
 
-    public Task<Void> add(Registration reg){
+    public Task<Void> add(UsersData reg){
 
         return databaseReference.push().setValue(reg);
     }

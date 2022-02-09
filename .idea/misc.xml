@@ -3,7 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/background.xml" value="0.1415" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/grey_boarder.xml" value="0.1415" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/pic_background.xml" value="0.1415" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/red_boarder.xml" value="0.1415" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/white_boarder.xml" value="0.1415" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_reg.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_start.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/bar_layout.xml" value="0.14938875305623472" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/loginactivity.xml" value="0.25" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/profile_bar_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/registeactivity.xml" value="0.2" />
       </map>
     </option>
   </component>
