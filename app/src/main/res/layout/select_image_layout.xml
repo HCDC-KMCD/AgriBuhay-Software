@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/red_boarder"
+        android:elevation="10dp"
+        android:outlineAmbientShadowColor="@color/grey"
+        tools:targetApi="p">
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="sans-serif-medium"
+            android:text="Open Images"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+    </FrameLayout>
+
+</LinearLayout>

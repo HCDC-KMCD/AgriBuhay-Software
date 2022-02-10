@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.service.autofill.UserData;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +39,6 @@ public class StartActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
 
         userName = findViewById(R.id.userName);
-
         circleImageView = findViewById(R.id.profile);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -61,6 +61,13 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(StartActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        circleImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
