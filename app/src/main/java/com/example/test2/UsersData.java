@@ -2,21 +2,21 @@ package com.example.test2;
 
 public class UsersData {
     private String userId;
-    private String full_name;
-    private String e_mail;
+    private String fullname;
+    private String email;
     private String gender;
-    private String num;
+    private String phone;
     private String imageURL;
 
     public UsersData() {
     }
 
-    public UsersData(String userId, String full_name, String e_mail, String gender, String num, String imageURL) {
+    public UsersData(String userId, String fullname, String email, String gender, String phone, String imageURL) {
         this.userId = userId;
-        this.full_name = full_name;
-        this.e_mail = e_mail;
+        this.fullname = fullname;
+        this.email = email;
         this.gender = gender;
-        this.num = num;
+        this.phone = phone;
         this.imageURL = imageURL;
     }
 
@@ -28,20 +28,20 @@ public class UsersData {
         this.userId = userId;
     }
 
-    public String getFull_name() {
-        return full_name;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
-    public String getE_mail() {
-        return e_mail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setE_mail(String e_mail) {
-        this.e_mail = e_mail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getGender() {
@@ -52,12 +52,12 @@ public class UsersData {
         this.gender = gender;
     }
 
-    public String getNum() {
-        return num;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setNum(String num) {
-        this.num = num;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getImageURL() {

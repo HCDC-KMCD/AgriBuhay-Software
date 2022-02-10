@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".StartActivity"
     android:orientation="vertical"
-    android:background="@color/primaryColor">
+    android:background="@drawable/pic_background">
 
     <include
         android:id="@+id/toolbar"

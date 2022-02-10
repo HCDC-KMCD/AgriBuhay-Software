@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/primaryColor"
-    style="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+    style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/menuStyle"
     android:id="@+id/toolbar"
     app:titleTextColor="@color/white">

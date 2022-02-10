@@ -38,7 +38,8 @@ public class StartActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
 
         userName = findViewById(R.id.userName);
-        circleImageView = findViewById(R.id.profileImage);
+
+        circleImageView = findViewById(R.id.profile);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -48,7 +49,7 @@ public class StartActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UsersData userData = snapshot.getValue(UsersData.class);
                 assert userData != null;
-                userName.setText(userData.getFull_name());
+                userName.setText(userData.getFullname());
                 if(userData.getImageURL().equals("default")){
                     circleImageView.setImageResource(R.drawable.ic_launcher_background);
                 }else{

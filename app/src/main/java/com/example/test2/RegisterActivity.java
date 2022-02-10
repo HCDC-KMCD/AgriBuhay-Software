@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
             startActivity (new Intent(RegisterActivity.this, LoginActivity.class));
         });
 
-
+        firebaseAuth = FirebaseAuth.getInstance();
 
         pass = findViewById(R.id.txtPass);
         name = findViewById(R.id.txtName);
@@ -64,16 +64,11 @@ public class RegisterActivity extends AppCompatActivity {
 
         btn = findViewById(R.id.btnRegister);
 
-
-
-//        DBReg dbReg = new DBReg();
-
-
         btn.setOnClickListener(v->{
-            final String full_name = name.getText().toString().trim();
-            final String e_mail = email.getText().toString().trim();
-            final String pass_word = pass.getText().toString().trim();
-            final String num = phone.getText().toString().trim();
+            final String full_name = name.getText().toString();
+            final String e_mail = email.getText().toString();
+            final String pass_word = pass.getText().toString();
+            final String num = phone.getText().toString();
 
             int checkId = radioGroup.getCheckedRadioButtonId();
 
@@ -95,41 +90,30 @@ public class RegisterActivity extends AppCompatActivity {
 
         });
 
-//        btn.setOnClickListener(v->{
-//            Registration reg = new Registration();
-//
-//            reg.setFullname(name.getText().toString());
-//            reg.setEmail(email.getText().toString());
-//
-//            reg.setPhone(phone.getText().toString());
-//
-//            reg.setPassword(pass.getText().toString());
-//
-//            dbReg.add(reg).addOnSuccessListener(suc->{
-//                Toast.makeText(this, "Record is inserted", Toast.LENGTH_SHORT).show();
-//            }).addOnFailureListener(er->{
-//                Toast.makeText(this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
-//            });
-//        });
     }
 
-    private void register(final String full_name, final String e_mail, final String pass_word, final String num, final String gender) {
+    private void register(String full_name,String e_mail,String pass_word,String num,String gender) {
         progressBar.setVisibility(View.VISIBLE);
         firebaseAuth.createUserWithEmailAndPassword(e_mail,pass_word).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
                     FirebaseUser rUser = firebaseAuth.getCurrentUser();
+                    assert rUser != null;
                     String userId = rUser.getUid();
+
                     db = FirebaseDatabase.getInstance().getReference("Users").child(userId);
-                    HashMap<String, String> hashMap = new HashMap<>();
+
+                    HashMap<String, String> hashMap = new HashMap<String, String>();
+
                     hashMap.put("userId", userId);
-                    hashMap.put("full_name", full_name);
-                    hashMap.put("e_mail", e_mail);
-                    hashMap.put("pass_word", pass_word);
-                    hashMap.put("num", num);
+                    hashMap.put("fullname", full_name);
+                    hashMap.put("email", e_mail);
+                    hashMap.put("phone", num);
                     hashMap.put("gender", gender);
-                    hashMap.put("ImageURL", "default");
+                    hashMap.put("imageURL", "default");
+
                     db.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                         @Override
@@ -137,7 +121,8 @@ public class RegisterActivity extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
                             if(task.isSuccessful()){
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
                             }else{
                                 Toast.makeText(RegisterActivity.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                             }

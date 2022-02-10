@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
     private TextView forgotpass;
     private Button login, register;
     private FirebaseAuth firebaseAuth;
-    private DatabaseReference databaseReference;
 
 
     @Override
@@ -60,16 +59,18 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void login(final String txtEmail, final String txtPass) {
+    private void login(String txtEmail,String txtPass) {
         progressBar.setVisibility(View.VISIBLE);
         firebaseAuth.signInWithEmailAndPassword(txtEmail,txtPass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
                     Intent intent = new Intent(LoginActivity.this, StartActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     finish();
+                    
                 }else{
                     Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
