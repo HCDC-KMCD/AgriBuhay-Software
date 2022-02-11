@@ -21,7 +21,7 @@
         tools:targetApi="p">
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnOpenImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
