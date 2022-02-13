@@ -41,14 +41,14 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdap
 
     @Override
     public void onBindViewHolder(@NonNull ImageRecyclerAdapter.MyViewHolder holder, final int position) {
-        Glide.with(context).load(imagesLists.get(position).getImageUrl()).into(holder.imageView);
+        Glide.with(context).load(imagesLists.get(position).getImageURL()).into(holder.imageView);
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
                 HashMap<String, Object> hashMap = new HashMap<>();
-                hashMap.put("imageUrl", imagesLists.get(position).getImageUrl());
+                hashMap.put("imageURL", imagesLists.get(position).getImageURL());
                 databaseReference.updateChildren(hashMap);
             }
         });

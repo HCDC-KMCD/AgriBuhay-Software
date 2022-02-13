@@ -1,20 +1,20 @@
 package com.example.test2;
 
 public class ImagesList {
-    private String imageUrl;
+    private String imageURL;
 
     public ImagesList() {
     }
 
-    public ImagesList(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public ImagesList(String imageURL) {
+        this.imageURL = imageURL;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }

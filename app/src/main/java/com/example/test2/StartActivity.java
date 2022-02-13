@@ -47,6 +47,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+
 public class StartActivity extends AppCompatActivity {
 
     private TextView userName;
@@ -83,13 +84,13 @@ public class StartActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UsersData userData = snapshot.getValue(UsersData.class);
-                assert userData != null;
-                userName.setText(userData.getFullname());
-                if(userData.getImageURL().equals("default")){
+                usersData = snapshot.getValue(UsersData.class);
+                assert usersData != null;
+                userName.setText(usersData.getFullname());
+                if(usersData.getImageURL().equals("default")){
                     circleImageView.setImageResource(R.drawable.ic_launcher_background);
                 }else{
-                    Glide.with(getApplicationContext()).load(userData.getImageURL()).into(circleImageView);
+                    Glide.with(getApplicationContext()).load(usersData.getImageURL()).into(circleImageView);
                 }
 
             }
@@ -103,6 +104,7 @@ public class StartActivity extends AppCompatActivity {
         circleImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(StartActivity.this);
                 builder.setCancelable(true);
                 view = LayoutInflater.from(StartActivity.this).inflate(R.layout.select_image_layout, null);
@@ -126,7 +128,6 @@ public class StartActivity extends AppCompatActivity {
                 builder.setView(view);
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
-
             }
 
             private void collectOldData() {
@@ -136,7 +137,7 @@ public class StartActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         imagesList.clear();
                         for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                            imagesList.add(snapshot.getValue(ImagesList.class));
+                            imagesList.add(dataSnapshot.getValue(ImagesList.class));
                         }
 
                         imageRecyclerAdapter.notifyDataSetChanged();
@@ -157,7 +158,6 @@ public class StartActivity extends AppCompatActivity {
         intent.setType("image/");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent, IMAGE_REQUEST);
-
     }
 
     @Override
@@ -166,7 +166,7 @@ public class StartActivity extends AppCompatActivity {
         if(requestCode == IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
             if(storageTask != null && storageTask.isInProgress()){
                 imageUri = data.getData();
-                Toast.makeText(this, "Uploading is in prgoress", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Uploading is in progress", Toast.LENGTH_SHORT).show();
             }else{
                 uploadImage();
             }
@@ -202,23 +202,28 @@ public class StartActivity extends AppCompatActivity {
             }).addOnCompleteListener(new OnCompleteListener<Uri>() {
                 @Override
                 public void onComplete(@NonNull Task<Uri> task) {
-                    Uri downloadUri = task.getResult();
-                    String sDownloadUri = downloadUri.toString();
-                    Map<String, Object> hashMap = new HashMap<>();
-                    hashMap.put("imageUrl", sDownloadUri);
-                    databaseReference.updateChildren(hashMap);
-                    final DatabaseReference profileImagesReference = FirebaseDatabase.getInstance().getReference("profile_images").child(firebaseUser.getUid());
-                    profileImagesReference.push().setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()){
-                                progressDialog.dismiss();
-                            }else{
-                                progressDialog.dismiss();
-                                Toast.makeText(StartActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    if(task.isSuccessful()){
+                        Uri downloadUri = task.getResult();
+                        String sDownloadUri = downloadUri.toString();
+                        Map<String, Object> hashMap = new HashMap<>();
+                        hashMap.put("imageURL", sDownloadUri);
+                        databaseReference.updateChildren(hashMap);
+                        final DatabaseReference profileImagesReference = FirebaseDatabase.getInstance().getReference("profile_images").child(firebaseUser.getUid());
+                        profileImagesReference.push().setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()){
+                                    progressDialog.dismiss();
+                                }else{
+                                    progressDialog.dismiss();
+                                    Toast.makeText(StartActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
                             }
-                        }
-                    });
+                        });
+                    }else{
+                        Toast.makeText(StartActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                    }
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override

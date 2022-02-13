@@ -105,7 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     db = FirebaseDatabase.getInstance().getReference("Users").child(userId);
 
-                    HashMap<String, String> hashMap = new HashMap<String, String>();
+                    HashMap<String, String> hashMap = new HashMap<>();
 
                     hashMap.put("userId", userId);
                     hashMap.put("fullname", full_name);
