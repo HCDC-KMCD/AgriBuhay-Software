@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".retailer_orderform">
+
+
+    <EditText
+        android:id="@+id/edit_ordershipaddress"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/text_theme"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Address"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_ordershipname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_ordershipname"
+        app:layout_constraintTop_toBottomOf="@+id/edit_ordershipname" />
+
+    <EditText
+        android:id="@+id/edit_ordercontact"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/text_theme"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Number"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        app:layout_constraintEnd_toEndOf="@+id/edit_ordershipaddress"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_ordershipaddress"
+        app:layout_constraintTop_toBottomOf="@+id/edit_ordershipaddress" />
+
+    <TextView
+        android:id="@+id/text_orderform"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round"
+        android:text="Order Form"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/text_orderproduct"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round"
+        android:text="Product:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_orderform" />
+
+    <TextView
+        android:id="@+id/textview_orderproduct"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_theme"
+        android:text="Product Name"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_orderform" />
+
+    <TextView
+        android:id="@+id/text_orderprice"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape_round"
+        android:text="Price (kg):"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_orderproduct"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_orderproduct"
+        app:layout_constraintTop_toBottomOf="@+id/text_orderproduct" />
+
+    <TextView
+        android:id="@+id/textview_orderprice"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/text_theme"
+        android:text="Price"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_orderproduct"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_orderproduct"
+        app:layout_constraintTop_toBottomOf="@+id/textview_orderproduct" />
+
+    <TextView
+        android:id="@+id/textview_ordertotal"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/text_theme"
+        android:text="Total"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_orderquantity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_orderquantity"
+        app:layout_constraintTop_toBottomOf="@+id/edit_orderquantity" />
+
+    <TextView
+        android:id="@+id/text_orderquantity"
+        android:layout_width="140dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_round"
+        android:text="Quantity (kg):"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_orderprice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_orderprice"
+        app:layout_constraintTop_toBottomOf="@+id/text_orderprice" />
+
+    <TextView
+        android:id="@+id/text_ordertotal"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_round"
+        android:text="Total:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_orderquantity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_orderquantity"
+        app:layout_constraintTop_toBottomOf="@+id/text_orderquantity" />
+
+    <TextView
+        android:id="@+id/text_ordershipname"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round"
+        android:text="Shipping Name:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_ordertotal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_ordertotal"
+        app:layout_constraintTop_toBottomOf="@+id/text_ordertotal" />
+
+    <TextView
+        android:id="@+id/text_ordershipaddress"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_round"
+        android:text="Shipping Address:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_ordershipname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_ordershipname"
+        app:layout_constraintTop_toBottomOf="@+id/text_ordershipname" />
+
+    <TextView
+        android:id="@+id/text_orderlogistics"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="384dp"
+        android:background="@drawable/shape_round"
+        android:text="Logistics"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_orderform" />
+
+    <TextView
+        android:id="@+id/text_ordercontact"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/shape_round"
+        android:text="Contact Number:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_ordershipaddress"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_ordershipaddress"
+        app:layout_constraintTop_toBottomOf="@+id/text_ordershipaddress" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_logistics"
+        android:layout_width="310dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/text_theme"
+        app:layout_constraintEnd_toEndOf="@+id/text_orderlogistics"
+        app:layout_constraintStart_toStartOf="@+id/text_orderlogistics"
+        app:layout_constraintTop_toBottomOf="@+id/text_orderlogistics" />
+
+    <Button
+        android:id="@+id/button_order"
+        android:layout_width="120dp"
+        android:layout_height="25pt"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_theme"
+        android:text="ORDER"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/radiogroup_logistics"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/radiogroup_logistics"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup_logistics" />
+
+    <EditText
+        android:id="@+id/edit_orderquantity"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_theme"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Quantity"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        app:layout_constraintEnd_toEndOf="@+id/textview_orderprice"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_orderprice"
+        app:layout_constraintTop_toBottomOf="@+id/textview_orderprice" />
+
+    <EditText
+        android:id="@+id/edit_ordershipname"
+        android:layout_width="199dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/text_theme"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        app:layout_constraintEnd_toEndOf="@+id/textview_ordertotal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_ordertotal"
+        app:layout_constraintTop_toBottomOf="@+id/textview_ordertotal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

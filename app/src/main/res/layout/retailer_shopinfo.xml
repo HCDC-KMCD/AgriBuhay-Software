@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".retailer_shopinfo">
+
+    <TextView
+        android:id="@+id/text_shopinformation"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round"
+        android:text="Shop Information"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/text_products"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/shape_round"
+        android:text="Products"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_shopinformation" />
+
+    <TextView
+        android:id="@+id/text_shopname"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round"
+        android:text="Name:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_shopinformation" />
+
+    <TextView
+        android:id="@+id/text_ownername"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round"
+        android:text="Owner Name:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_shopname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_shopname"
+        app:layout_constraintTop_toBottomOf="@+id/text_shopname" />
+
+    <TextView
+        android:id="@+id/text_shopaddress"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round"
+        android:text="Address:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_ownername"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_ownername"
+        app:layout_constraintTop_toBottomOf="@+id/text_ownername" />
+
+    <TextView
+        android:id="@+id/text_shopcontact"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/shape_round"
+        android:text="Contact Number:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_shopaddress"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_shopaddress"
+        app:layout_constraintTop_toBottomOf="@+id/text_shopaddress" />
+
+    <TextView
+        android:id="@+id/text_emailaddress"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round"
+        android:text="Email Address:"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_shopcontact"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_shopcontact"
+        app:layout_constraintTop_toBottomOf="@+id/text_shopcontact" />
+
+    <TextView
+        android:id="@+id/textview_shopname"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_theme"
+        android:text="Business Name"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toEndOf="@+id/text_shopname"
+        app:layout_constraintTop_toBottomOf="@+id/text_shopinformation" />
+
+    <TextView
+        android:id="@+id/textview_shopcontact"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/text_theme"
+        android:text="Contact Number"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_shopaddress"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_shopaddress"
+        app:layout_constraintTop_toBottomOf="@+id/textview_shopaddress" />
+
+    <TextView
+        android:id="@+id/textview_shopemail"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_theme"
+        android:text="Email Address"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_shopcontact"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_shopcontact"
+        app:layout_constraintTop_toBottomOf="@+id/textview_shopcontact" />
+
+    <TextView
+        android:id="@+id/textview_ownername"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_theme"
+        android:text="Owner Name"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_shopname"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_shopname"
+        app:layout_constraintTop_toBottomOf="@+id/textview_shopname" />
+
+    <TextView
+        android:id="@+id/textview_shopaddress"
+        android:layout_width="230dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_theme"
+        android:text="address to tangina "
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_ownername"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_ownername"
+        app:layout_constraintTop_toBottomOf="@+id/textview_ownername" />
+
+    <ListView
+        android:id="@+id/listview_product"
+        android:layout_width="322dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/listview_theme"
+        app:layout_constraintEnd_toEndOf="@+id/text_products"
+        app:layout_constraintStart_toStartOf="@+id/text_products"
+        app:layout_constraintTop_toBottomOf="@+id/text_products" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

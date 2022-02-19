@@ -3,21 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable-v24/button_theme.xml" value="0.1385" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable-v24/slight_red_boarder.xml" value="0.1385" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable-v24/text_theme.xml" value="0.1385" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/background.xml" value="0.1415" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/grey_boarder.xml" value="0.1415" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/pic_background.xml" value="0.1415" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/red_boarder.xml" value="0.1415" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/drawable/white_boarder.xml" value="0.1415" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_add.xml" value="0.2" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_edit.xml" value="0.2" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_forget_password.xml" value="0.2" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_reg.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/activity_start.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/bar_layout.xml" value="0.14938875305623472" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.2" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/image_layout.xml" value="0.2" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/loginactivity.xml" value="0.25" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/product_rv_model.xml" value="0.33" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/profile_bar_layout.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/registeactivity.xml" value="0.2" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/registeactivity.xml" value="0.22" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/retailer_myaccount.xml" value="0.2" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/retailer_myaccount_dialog.xml" value="0.16" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/retailer_orderdetails.xml" value="0.25" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/retailer_orderform.xml" value="0.25" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/retailer_productinfo.xml" value="0.25" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/retailer_shopinfo.xml" value="0.18" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/retailer_shoplist.xml" value="0.2" />
         <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/layout/select_image_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/menu/menu_main.xml" value="0.2" />
+        <entry key="..\:/Users/Ismael/AndroidStudioProjects/Test2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1385" />
       </map>
     </option>
   </component>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    android:background="@drawable/pic_background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/grey_boarder"
+                android:elevation="30dp"
+                android:outlineAmbientShadowColor="@color/grey"
+                tools:targetApi="p">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/txtBusinessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter Business Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="16sp"
+                    android:paddingRight="16sp"
+                    android:textColorHint="@color/primaryColor"
+                    android:textStyle="bold"
+                    app:met_baseColor="@color/primaryColor"
+                    app:met_floatingLabel="normal"
+                    app:met_textColor="@color/primaryColor" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/grey_boarder"
+                android:elevation="30dp"
+                android:outlineAmbientShadowColor="@color/grey"
+                tools:targetApi="p">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/txtOwnerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter Owner Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="16sp"
+                    android:paddingRight="16sp"
+                    android:textColorHint="@color/primaryColor"
+                    android:textStyle="bold"
+                    app:met_baseColor="@color/primaryColor"
+                    app:met_floatingLabel="normal"
+                    app:met_textColor="@color/primaryColor" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/grey_boarder"
+                android:elevation="30dp"
+                android:outlineAmbientShadowColor="@color/grey"
+                tools:targetApi="p">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/txtBusinessAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter Business Address"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="16sp"
+                    android:paddingRight="16sp"
+                    android:textColorHint="@color/primaryColor"
+                    android:textStyle="bold"
+                    app:met_baseColor="@color/primaryColor"
+                    app:met_floatingLabel="normal"
+                    app:met_textColor="@color/primaryColor" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/grey_boarder"
+                android:elevation="30dp"
+                android:outlineAmbientShadowColor="@color/grey"
+                tools:targetApi="p">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/txtContactNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter Business Number"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="16sp"
+                    android:paddingRight="16sp"
+                    android:textColorHint="@color/primaryColor"
+                    android:textStyle="bold"
+                    app:met_baseColor="@color/primaryColor"
+                    app:met_floatingLabel="normal"
+                    app:met_textColor="@color/primaryColor" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/grey_boarder"
+                android:elevation="30dp"
+                android:outlineAmbientShadowColor="@color/grey"
+                tools:targetApi="p">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/txtBusinessEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter Business Email"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="16sp"
+                    android:paddingRight="16sp"
+                    android:textColorHint="@color/primaryColor"
+                    android:textStyle="bold"
+                    app:met_baseColor="@color/primaryColor"
+                    app:met_floatingLabel="normal"
+                    app:met_textColor="@color/primaryColor" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/grey_boarder"
+                android:elevation="30dp"
+                android:outlineAmbientShadowColor="@color/grey"
+                tools:targetApi="p">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/datePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter date maturity of harvest"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="16sp"
+                    android:paddingRight="16sp"
+                    android:textColorHint="@color/primaryColor"
+                    android:textStyle="bold"
+                    app:met_baseColor="@color/primaryColor"
+                    app:met_floatingLabel="normal"
+                    app:met_textColor="@color/primaryColor" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/red_boarder"
+                android:elevation="10dp"
+                android:outlineAmbientShadowColor="@color/grey"
+                tools:targetApi="p">
+
+                <Button
+                    android:id="@+id/btnAddProducts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/selectableItemBackground"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Add Products"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@color/primaryColor"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</ScrollView>

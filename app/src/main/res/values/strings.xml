@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Test2</string>
+    <string name="producers">Producers</string>
+    <string name="sort_by">Sort By:</string>
+    <string name="price">Price</string>
+    <string name="rating">RATING</string>
+    <string name="my_account">My Account</string>
+    <string name="logout">LOGOUT</string>
+    <string name="email_address">Email Address:</string>
+    <string name="products_ordered">Products Ordered:</string>
+    <string name="current">Current</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="account_information">Account Information</string>
+    <string name="delivered">Delivered</string>
+    <string name="seller">Seller</string>
+    <string name="total_price">Total Price (₱):</string>
+    <string name="price_per_kg">Price per kg (₱):</string>
+    <string name="order_no">Order No:</string>
+    <string name="buyer">Buyer</string>
+    <string name="courier">Courier</string>
+    <string name="name">Name:</string>
+    <string name="contact_number">Contact Number:</string>
+    <string name="product_ordered">Product Ordered:</string>
+    <string name="address">Address:</string>
+    <string name="order_details">Order Details</string>
+    <string name="delivery_date">Delivery Date:</string>
+    <string name="quantity_kg">Quantity (kg):</string>
 </resources>

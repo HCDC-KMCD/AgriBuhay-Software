@@ -84,10 +84,114 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
 
                 }else{
-                    register(full_name, e_mail, pass_word, num, gender);
+                    switch(gender){
+                        case "Producer":
+                            registerProducer(full_name, e_mail, pass_word, num, gender);
+                            break;
+                        case "Logistics":
+                            registerLogistics(full_name, e_mail, pass_word, num, gender);
+                            break;
+                        case "Costumer":
+                            register(full_name, e_mail, pass_word, num, gender);
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
 
+        });
+
+    }
+
+    private void registerLogistics(String full_name, String e_mail, String pass_word, String num, String gender) {
+        progressBar.setVisibility(View.VISIBLE);
+        firebaseAuth.createUserWithEmailAndPassword(e_mail,pass_word).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+
+                    FirebaseUser rUser = firebaseAuth.getCurrentUser();
+                    assert rUser != null;
+                    String userId = rUser.getUid();
+
+                    db = FirebaseDatabase.getInstance().getReference("Logistics").child(userId);
+
+                    HashMap<String, String> hashMap = new HashMap<>();
+
+                    hashMap.put("userId", userId);
+                    hashMap.put("fullname", full_name);
+                    hashMap.put("email", e_mail);
+                    hashMap.put("phone", num);
+                    hashMap.put("gender", gender);
+                    hashMap.put("imageURL", "default");
+
+                    db.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            progressBar.setVisibility(View.GONE);
+                            if(task.isSuccessful()){
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }else{
+                                Toast.makeText(RegisterActivity.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                }else{
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+
+    private void registerProducer(String full_name, String e_mail, String pass_word, String num, String gender) {
+        progressBar.setVisibility(View.VISIBLE);
+        firebaseAuth.createUserWithEmailAndPassword(e_mail,pass_word).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+
+                    FirebaseUser rUser = firebaseAuth.getCurrentUser();
+                    assert rUser != null;
+                    String userId = rUser.getUid();
+
+                    db = FirebaseDatabase.getInstance().getReference("Producer").child(userId);
+
+                    HashMap<String, String> hashMap = new HashMap<>();
+
+                    hashMap.put("userId", userId);
+                    hashMap.put("fullname", full_name);
+                    hashMap.put("email", e_mail);
+                    hashMap.put("phone", num);
+                    hashMap.put("gender", gender);
+                    hashMap.put("imageURL", "default");
+
+                    db.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            progressBar.setVisibility(View.GONE);
+                            if(task.isSuccessful()){
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }else{
+                                Toast.makeText(RegisterActivity.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                }else{
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
         });
 
     }
@@ -103,7 +207,7 @@ public class RegisterActivity extends AppCompatActivity {
                     assert rUser != null;
                     String userId = rUser.getUid();
 
-                    db = FirebaseDatabase.getInstance().getReference("Users").child(userId);
+                    db = FirebaseDatabase.getInstance().getReference("Costumers").child(userId);
 
                     HashMap<String, String> hashMap = new HashMap<>();
 
